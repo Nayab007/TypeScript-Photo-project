@@ -8,8 +8,7 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  
   grid-gap: 3%;
   justify-content: center;
   margin: 15px 10px 10px 45px;
@@ -94,14 +93,22 @@
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .grid-container {
+    
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 5px;
-    width: 80%;
-    height: 80%;
-    margin: 25px 10px 10px 25px;
+    width: 60%;
+    height: 70%;
+    margin: 35px 5px 5px 85px;
+    
   }
 
+  .title{
+    margin: 2px 5px 5px 65px;
+    width: 65%;
+    background-color: #61dafb;
+    word-spacing: 25px;
+    text-align: center;
+    
+  }
   
 }

@@ -13,8 +13,9 @@ export default function Pictures(props: PictureProps) {
     <div style={{ display: "flex", flexWrap: "wrap", width: "90%" }}>
       {pictures.map((user) => {
         return (
-          <div key={user.id} style={{ width: "25%", margin: "5% 0% 0% 8%" }}>
+          <div className="grid-container" key={user.id} >
            
+            <div>
             <a
                 href={user.download_url}
                 target="_blank"
@@ -27,9 +28,10 @@ export default function Pictures(props: PictureProps) {
               alt={"some pic alt"}
             />
             </a>
+            </div>
             <div className="title">
-            <h4>Id:{user.id}</h4>
-            <h5 style={{wordSpacing: "15px", textAlign: "center", width: "25vw", marginTop: "-4vh"}}>Title: {user.author}</h5>
+            <h4>Id: {user.id}</h4>
+            <h5>Title: {user.author}</h5>
             </div>
           </div>
         );
