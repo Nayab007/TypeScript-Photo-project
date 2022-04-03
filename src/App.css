@@ -93,7 +93,6 @@
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .grid-container {
-    
     display: grid;
     grid-gap: 5px;
     width: 60%;
@@ -129,7 +128,7 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     white-space: nowrap;
-    margin: 50px 10px 10px 40%;
+    margin: 40px 10px 10px 10%;
   }
   #previousButton:not([disabled]):focus {
     box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5),
