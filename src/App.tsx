@@ -55,7 +55,7 @@ export default function App() {
         </button>
         Page {page}
         <button id="nextButton" onClick={changePage}>
-          Next Pag 
+          Next Page 
         </button>
       </div>
       </div>
