@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import Pictures from "./Pictures";
-import fetchPictures from "./services/fetchPictures";
+import React, { useEffect, useState } from 'react';
+import Pictures from './Pictures';
+import fetchPictures from './services/fetchPictures';
 import './App.css';
 
 export interface Users {
@@ -20,9 +20,9 @@ export default function App() {
     const buttonId = e.target.id;
     // do nothing if is the first page
     const firstPage = page === 1 ? true : false;
-    if (firstPage && buttonId === "previousButton") return;
+    if (firstPage && buttonId === 'previousButton') return;
     // here is where the magic happens
-    return buttonId === "nextButton" ? setPage(page + 1) : setPage(page - 1);
+    return buttonId === 'nextButton' ? setPage(page + 1) : setPage(page - 1);
   };
 
   useEffect(() => {
@@ -37,29 +37,35 @@ export default function App() {
 
   return (
     <>
-    <div>
-<button id="previousButton" onClick={changePage}>
-          Previous page
-        </button>
-        Page {page}
-        <button id="nextButton" onClick={changePage}>
-          Next page
-        </button>
-        
-      <Pictures pictures={pictures} />
-     
-      
       <div>
         <button id="previousButton" onClick={changePage}>
           Previous page
         </button>
         Page {page}
         <button id="nextButton" onClick={changePage}>
-          Next Page 
+          Next page
         </button>
-      </div>
+        <div className="search-box">
+          <input
+            className="search-text"
+            type="text"
+            placeholder="Search Author name"
+          >
+            
+          
+          </input>
+        </div>
+        <Pictures pictures={pictures} />
+        <div>
+          <button id="previousButton" onClick={changePage}>
+            Previous page
+          </button>
+          Page {page}
+          <button id="nextButton" onClick={changePage}>
+            Next Page
+          </button>
+        </div>
       </div>
     </>
   );
 }
-
