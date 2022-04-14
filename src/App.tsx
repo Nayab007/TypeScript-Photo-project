@@ -49,7 +49,7 @@ export default function App() {
           <input
             className="search-text"
             type="text"
-            placeholder="Search Author namee"
+            placeholder="Search Author name"
           >
             
           
