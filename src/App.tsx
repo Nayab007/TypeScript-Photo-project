@@ -28,7 +28,7 @@ export default function App() {
   useEffect(() => {
     // you are able to pass a limit too, change the second parameter to see
     const pics = async () => {
-      const pics = await fetchPictures(page, 10);
+      const pics = await fetchPictures(page, 15);
       setPictures(pics);
     };
 
@@ -45,16 +45,7 @@ export default function App() {
         <button id="nextButton" onClick={changePage}>
           Next page
         </button>
-        <div className="search-box">
-          <input
-            className="search-text"
-            type="text"
-            placeholder="Search Author  name"
-          >
-            
-          
-          </input>
-        </div>
+       
         <Pictures pictures={pictures} />
         <div>
           <button id="previousButton" onClick={changePage}>
