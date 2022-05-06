@@ -16,6 +16,7 @@ export default function Pictures(props: PictureProps) {
           <div className="grid-container" key={user.id} >
            
             <div>
+            
             <a
                 href={user.download_url}
                 target="_blank"

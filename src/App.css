@@ -10,7 +10,7 @@ body {
 }
 
 .App-link {
-  color: #61dafb;
+  color: #11dafb;
 }
 
 .grid-container {
@@ -95,6 +95,7 @@ body {
     -0.125rem -0.125rem 1rem rgba(239, 71, 101, 0.5),
     0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
 }
+
 
 
 

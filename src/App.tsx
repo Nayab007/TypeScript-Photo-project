@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Pictures from './Pictures';
 import fetchPictures from './services/fetchPictures';
+
 import './App.css';
+
 
 export interface Users {
   id: number;
@@ -14,6 +16,7 @@ export interface Users {
 export default function App() {
   const [pictures, setPictures] = useState<Array<Users>>([]);
   const [page, setPage] = useState<number>(1);
+  
 
   // here we handle the change of the page
   const changePage = (e: any) => {
@@ -35,8 +38,13 @@ export default function App() {
     pics();
   }, [page]);
 
+ 
+
+
+
   return (
     <>
+    
       <div>
         <button id="previousButton" onClick={changePage}>
           Previous page
@@ -45,7 +53,8 @@ export default function App() {
         <button id="nextButton" onClick={changePage}>
           Next page
         </button>
-       
+        <input id ="Search" type="text" placeholder="Search author name" />
+        
         <Pictures pictures={pictures} />
         <div>
           <button id="previousButton" onClick={changePage}>
