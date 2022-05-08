@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import * as ReactDOM from "react-dom";
+
 import axios from "axios";
 
-function App() {
+function Searchbar() {
   const [query, setQuery] = useState("");
   const [data, setData] = useState([]);
 
@@ -35,11 +35,11 @@ function App() {
       />
       <div>
         {searchResults.map((author) => (
-          <div>{author.author}</div>
+          <div>{author}</div>
         ))}
       </div>
     </div>
   );
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+export default Searchbar;
