@@ -24,7 +24,7 @@ function Searchbar() {
         authorData['author'].toLowerCase().includes(query)
       )
     );
-  }, [query, data]);
+  },[query, data]);
 
   return (
     <div className="app">
