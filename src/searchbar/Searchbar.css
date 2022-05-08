@@ -1,51 +1,48 @@
-.container {
+.app {
+    margin: 50px;
     display: flex;
-    justify-content: center;
-    align-items: center;height: 100vh;
-}
+    flex-direction: column;
+    align-items: center;
+    width: 900px;
+  }
 
-.searchbar{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: relative;
-}
-
-input{
+.search {
     padding: 10px;
-    border-radius: 5px;
-    background-color: darkslategray;
-    top: 0;
-    right: 0;
-    width: 20px;
-    color: white;
-    transition: 0.4s ease;
-}
-
-btn{
-    position: absolute;
-    top: 60%;
-    transform: translateY(-60%);
-    right: 10px;
     font-size: 20px;
-    cursor: pointer;
-    background-color: transparent;
-    color: #ffffff
-}
-
-
-.input-active{
-  width: 300px;
-}
-
-.input-active input::placeholder{
-    color: #ffffff;
-}
-
-.input::placeholder{
-    color: transparent;
-}
-
-.input:focus {
-    outline: none;
-}
+  }
+  
+  .list {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+  
+  .listItem {
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: #444;
+    font-weight: 300;
+  }
+  
+  table {
+    width: 100%;
+    margin: 50px 0px;
+    border-spacing: 15px;
+    color: #444;
+  }
+  
+  tr {
+    margin-bottom: 20px;
+  }
+  
+  th {
+    width: 250px;
+    text-align: left;
+    font-size: 20px;
+  }
+  
+  td {
+    width: 250px;
+    font-size: 20px;
+  }
+  

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Pictures from './Pictures';
 import fetchPictures from './services/fetchPictures';
+import Searchbar from './searchbar/Searchbar';
 
 
 import './App.css';
@@ -55,7 +56,7 @@ export default function App() {
           Next page
         </button>
       
-        
+        <Searchbar/>
         <Pictures pictures={pictures} />
         <div>
           <button id="previousButton" onClick={changePage}>
