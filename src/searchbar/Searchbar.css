@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;height: 100vh;
+}
+
+.searchbar{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
+
+input{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: darkslategray;
+    top: 0;
+    right: 0;
+    width: 20px;
+    color: white;
+    transition: 0.4s ease;
+}
+
+btn{
+    position: absolute;
+    top: 60%;
+    transform: translateY(-60%);
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #ffffff
+}
+
+
+.input-active{
+  width: 300px;
+}
+
+.input-active input::placeholder{
+    color: #ffffff;
+}
+
+.input::placeholder{
+    color: transparent;
+}
+
+.input:focus {
+    outline: none;
+}

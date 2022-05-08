@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Pictures from './Pictures';
 import fetchPictures from './services/fetchPictures';
 
+
 import './App.css';
 
 
@@ -53,7 +54,7 @@ export default function App() {
         <button id="nextButton" onClick={changePage}>
           Next page
         </button>
-        <input id ="Search" type="text" placeholder="Search author name" />
+      
         
         <Pictures pictures={pictures} />
         <div>
