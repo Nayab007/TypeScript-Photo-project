@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import axios from "axios";
+import axios from 'axios';
 
 function Searchbar() {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState('');
   const [data, setData] = useState([]);
 
   // Add one more state to store the authors being searched for
@@ -21,7 +21,7 @@ function Searchbar() {
   useEffect(() => {
     setSearchResults(
       data.filter((authorData) =>
-      authorData["author"].toLowerCase().includes(query)
+        authorData['author'].toLowerCase().includes(query)
       )
     );
   }, [query, data]);
