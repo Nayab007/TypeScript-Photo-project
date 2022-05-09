@@ -18,7 +18,14 @@ function Searchbar() {
   }, []);
 
   // Query that handles searching
-  
+  useEffect(() => {
+    setSearchResults(
+      data.filter((authorData) =>
+        authorData['author'].toLowerCase().includes(query)
+      )
+    );
+  },[query, data]);
+
   return (
     <div className="app">
       <input
