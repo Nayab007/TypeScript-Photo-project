@@ -21,7 +21,7 @@ function Searchbar() {
   useEffect(() => {
     setSearchResults(
       data.filter((authorData) =>
-        authorData['author'].toLowerC().includes(query))
+        authorData['author'].toLowe().includes(query))
     );
   },[query, data]);
 
