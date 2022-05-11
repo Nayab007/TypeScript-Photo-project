@@ -1,13 +1,23 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-import axios from 'axios';
+type fetchData = {
+  id: number,
+  author: string,
+  width: number,
+  height: number,
+  url: string,
+  download_url: string
+}
 
 function Searchbar() {
-  const [query, setQuery] = useState('');
-  const [data, setData] = useState([]);
+  const [query, setQuery] = useState("");
+
+  const [data, setData] = useState<fetchData[]>([]);
 
   // Add one more state to store the authors being searched for
-  const [searchResults, setSearchResults] = useState([]);
+
+  const [searchResults, setSearchResults] = useState<fetchData[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,13 +27,13 @@ function Searchbar() {
     fetchData();
   }, []);
 
-  // Query that handles searching
   useEffect(() => {
     setSearchResults(
-      data.filter((authorData) =>
-        authorData['author'].toLowerCase().includes(query))
+      data.filter((authorData : fetchData) =>
+        authorData.author.toLowerCase().includes(query)
+      )
     );
-  },[query, data]);
+  }, [query, data]);
 
   return (
     <div className="app">
@@ -34,7 +44,7 @@ function Searchbar() {
       />
       <div>
         {searchResults.map((author) => (
-          <div>{author}</div>
+          <div key={author.id}>{author.author}</div>
         ))}
       </div>
     </div>
