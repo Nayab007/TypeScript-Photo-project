@@ -38,7 +38,7 @@ body {
 #previousButton {
   background: linear-gradient(to bottom right, #ef4765, #ff9a5a);
   border: 0;
-  border-radius: 12px;
+  border-radius: 11px;
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
