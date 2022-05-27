@@ -10,7 +10,7 @@ import './App.css';
 export interface Users {
   id: number;
   author: string;
-  download_url: str;
+  download_url: st;
   url: string;
   page: string;
 }
